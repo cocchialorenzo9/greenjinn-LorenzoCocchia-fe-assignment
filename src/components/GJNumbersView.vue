@@ -5,7 +5,7 @@ shows them through GJNumbersView-->
   <h1>{{ title }}</h1>
   <div class="gj-numbers-view__list">
     <!-- for each element in GJList, create a GJNumbersView component -->
-    <GJNumberLabel v-for="(number, description) in list"
+    <GJNumberLabel v-for="(number, description) in gjList"
                    :key="number"
                    :number="number"
                    :description="description">
@@ -27,8 +27,8 @@ export default {
       type: String,
       required: true
     },
-    GJList: {
-      type: Array,
+    gjList: {
+      type: Object,
       required: true
     }
   }
